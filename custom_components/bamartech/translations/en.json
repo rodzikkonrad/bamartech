@@ -1,0 +1,63 @@
+{
+    "title": "Bamartech",
+    "config": {
+        "step": {
+            "user": {
+                "title": "Connect to Bamartech Device",
+                "description": "Enter your Bamartech server credentials.",
+                "data": {
+                    "username": "Username",
+                    "password": "Password"
+                },
+                "data_description": {
+                    "username": "Your Bamartech server username.",
+                    "password": "Your Bamartech server password."
+                }
+            }
+        },
+        "error": {
+            "cannot_connect": "Unable to connect. Check the address and port.",
+            "invalid_auth": "Authentication failed. Check your credentials.",
+            "unknown": "An unexpected error occurred. Check the logs."
+        },
+        "abort": {
+            "already_configured": "This device is already configured.",
+            "reauth_successful": "Re-authentication was successful."
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "plant_ok": {
+                "name": "Plant Status"
+            }
+        },
+        "sensor": {
+            "uptime_days": {
+                "name": "Uptime"
+            },
+            "wywoz_osadow": {
+                "name": "Sludge Removal"
+            },
+            "biopreparaty": {
+                "name": "Bio-preparations"
+            },
+            "konserwacja": {
+                "name": "Maintenance"
+            }
+        },
+        "switch": {
+            "blower": {
+                "name": "Blower (Dmuchawa)"
+            },
+            "pump": {
+                "name": "Pump (Pompa)"
+            },
+            "solenoid": {
+                "name": "Solenoid Valve (Elektrozawór)"
+            },
+            "output": {
+                "name": "Output (Wyjście)"
+            }
+        }
+    }
+}

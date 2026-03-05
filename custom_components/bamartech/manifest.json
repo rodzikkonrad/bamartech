@@ -1,0 +1,21 @@
+{
+    "domain": "bamartech",
+    "name": "Bamartech",
+    "version": "1.0.0",
+    "documentation": "https://github.com/rodzikkonrad/bamartech",
+    "issue_tracker": "https://github.com/rodzikkonrad/bamartech/issues",
+    "codeowners": [
+        "@rodzikkonrad"
+    ],
+    "config_flow": true,
+    "integration_type": "hub",
+    "iot_class": "cloud_push",
+    "requirements": [
+        "paho-mqtt>=1.6.1"
+    ],
+    "dependencies": [
+        "frontend",
+        "http",
+        "lovelace"
+    ]
+}

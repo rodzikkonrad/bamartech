@@ -1,0 +1,36 @@
+set_counter:
+  name: Resetuj licznik
+  description: Resetuje licznik serwisowy oczyszczalni do wybranej wartości.
+  fields:
+    counter:
+      name: Licznik
+      description: "Który licznik zresetować: biopreparaty, wywoz_osadow lub konserwacja."
+      required: true
+      example: "biopreparaty"
+      selector:
+        select:
+          options:
+            - biopreparaty
+            - wywoz_osadow
+            - konserwacja
+    index:
+      name: Indeks opcji
+      description: >
+        Indeks wybranej opcji (0–3).
+        Biopreparaty:  0=1 tydzień, 1=2 tygodnie, 2=3 tygodnie,  3=4 tygodnie.
+        Wywóz osadów:  0=3 miesiące, 1=6 miesięcy, 2=9 miesięcy, 3=12 miesięcy.
+        Konserwacja:   0=3 miesiące, 1=6 miesięcy, 2=9 miesięcy, 3=12 miesięcy.
+      required: true
+      example: 0
+      selector:
+        number:
+          min: 0
+          max: 3
+          mode: box
+
+poll:
+  name: Odśwież stan
+  description: >
+    Wysyła polecenie odpytania do urządzenia, które odpowiada aktualnym
+    stanem w ciągu ~1 sekundy. Przydatne do natychmiastowego odświeżenia
+    bez czekania na następną cykliczną transmisję (~5 min).

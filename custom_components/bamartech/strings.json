@@ -1,0 +1,63 @@
+{
+    "title": "Bamartech",
+    "config": {
+        "step": {
+            "user": {
+                "title": "Połącz z urządzeniem Bamartech",
+                "description": "Podaj dane logowania do serwera Bamartech.",
+                "data": {
+                    "username": "Login",
+                    "password": "Hasło"
+                },
+                "data_description": {
+                    "username": "Nazwa użytkownika do serwera Bamartech.",
+                    "password": "Hasło do serwera Bamartech."
+                }
+            }
+        },
+        "error": {
+            "cannot_connect": "Nie można nawiązać połączenia. Sprawdź adres i port.",
+            "invalid_auth": "Błąd uwierzytelnienia. Sprawdź dane logowania.",
+            "unknown": "Wystąpił nieoczekiwany błąd. Sprawdź logi."
+        },
+        "abort": {
+            "already_configured": "To urządzenie jest już skonfigurowane.",
+            "reauth_successful": "[%key:common::config_flow::abort::reauth_successful%]"
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "plant_ok": {
+                "name": "Status oczyszczalni"
+            }
+        },
+        "sensor": {
+            "uptime_days": {
+                "name": "Czas pracy"
+            },
+            "wywoz_osadow": {
+                "name": "Wywóz osadów"
+            },
+            "biopreparaty": {
+                "name": "Biopreparaty"
+            },
+            "konserwacja": {
+                "name": "Konserwacja"
+            }
+        },
+        "switch": {
+            "blower": {
+                "name": "Dmuchawa"
+            },
+            "pump": {
+                "name": "Pompa"
+            },
+            "solenoid": {
+                "name": "Elektrozawór"
+            },
+            "output": {
+                "name": "Wyjście"
+            }
+        }
+    }
+}
